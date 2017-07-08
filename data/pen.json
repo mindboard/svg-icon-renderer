@@ -1,0 +1,17 @@
+{
+	"svgCommands": "M 9.5,2.6 v 1 h 5 v -1 z M 9.5,4.1 v 13 h 5 v -13 z M 9.6,17.6 l 2.1,4.2 q 0.3,0.5 0.6,0 l 2.1,-4.2 z",
+	"width": 64,
+	"height": 64,
+	"pngFile": "pen.png",
+	"backgroundColor": {
+		"a": 255,
+		"r": 255,
+		"g": 255,
+		"b": 255},
+	"foregroundColor": {
+		"a": 255,
+		"r": 0,
+		"g": 0,
+		"b": 0},
+	"fill": true
+}

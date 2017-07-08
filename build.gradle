@@ -1,0 +1,76 @@
+buildscript {
+  ext.kotlin_version = '1.1.2-4'
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = 'com.mindboardapps.app.svg.iconrender.MainKt'
+
+run {
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+')
+    }
+}
+
+defaultTasks 'run'
+
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  compile group: 'org.json', name: 'json', version: '20170516'
+  testCompile 'junit:junit:4.11'
+  testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = "2.7"
+}
+group 'svg-icon-render'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.1.3-2'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+clean.doFirst {
+    new File('.').listFiles( {it.name.endsWith('png')} as FileFilter ).each { it.delete() }
+}
