@@ -1,4 +1,4 @@
-# svg-icon-renderer
+# SVG 24x24 Icon Renderer
 
 A tool to render SVG commands
 
