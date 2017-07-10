@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
-mainClassName = 'com.mindboardapps.app.svg.iconrender.MainKt'
+mainClassName = 'com.mindboardapps.app.svg.iconrenderer.MainKt'
 
 run {
     if (project.hasProperty('args')) {
@@ -36,7 +36,7 @@ dependencies {
 task wrapper(type: Wrapper) {
   gradleVersion = "2.7"
 }
-group 'svg-icon-render'
+group 'svg-icon-renderer'
 version '1.0-SNAPSHOT'
 
 buildscript {

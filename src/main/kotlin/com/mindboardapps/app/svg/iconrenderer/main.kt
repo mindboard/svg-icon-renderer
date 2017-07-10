@@ -1,4 +1,4 @@
-package com.mindboardapps.app.svg.iconrender
+package com.mindboardapps.app.svg.iconrenderer
 
 import org.json.JSONObject
 import java.awt.Color

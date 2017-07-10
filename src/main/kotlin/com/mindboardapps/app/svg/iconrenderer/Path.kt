@@ -1,4 +1,4 @@
-package com.mindboardapps.app.svg.iconrender
+package com.mindboardapps.app.svg.iconrenderer
 
 import java.awt.Shape
 import java.awt.geom.AffineTransform

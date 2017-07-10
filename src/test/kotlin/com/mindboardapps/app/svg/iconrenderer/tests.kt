@@ -1,4 +1,4 @@
-package com.mindboardapps.app.svg.iconrender
+package com.mindboardapps.app.svg.iconrenderer
 
 import kotlin.test.assertEquals
 import org.junit.Test

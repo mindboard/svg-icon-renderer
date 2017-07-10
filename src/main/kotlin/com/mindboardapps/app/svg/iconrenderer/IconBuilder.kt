@@ -1,4 +1,4 @@
-package com.mindboardapps.app.svg.iconrender
+package com.mindboardapps.app.svg.iconrenderer
 
 import java.awt.Graphics2D
 import java.awt.RenderingHints
