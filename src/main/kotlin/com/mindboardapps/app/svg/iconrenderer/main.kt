@@ -6,6 +6,7 @@ import java.io.File
 import javax.imageio.ImageIO
 
 fun main(args: Array<String>) {
+    System.setProperty("java.awt.headless", "true")
     if( args.size>0 && File(args[0]).exists() ) {
         val text = File(args[0]).readText(charset("UTF-8"))
         val jsonObj = JSONObject(text)
