@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
         val svgCommands = jsonObj.getString("svgCommands")
         val width = jsonObj.getInt("width")
         val height = jsonObj.getInt("height")
-        val pngFile = jsonObj.getString("pngFile")
+        val pngFilename = if( jsonObj.has("pngFile") ){ jsonObj.getString("pngFile") } else { File(args[0]).name.replace(Regex(".json$"),".png") }
 
         val createColor: (obj: JSONObject) -> Color = {
             Color(
@@ -31,6 +31,6 @@ fun main(args: Array<String>) {
         ImageIO.write(
                 IconBuilder(svgCommands, width, height, paintOptions).createImage(),
                 "PNG",
-                File(pngFile))
+                File(pngFilename))
     }
 }
