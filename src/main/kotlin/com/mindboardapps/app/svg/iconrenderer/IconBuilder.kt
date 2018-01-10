@@ -1,5 +1,6 @@
 package com.mindboardapps.app.svg.iconrenderer
 
+import java.awt.BasicStroke
 import java.awt.Graphics2D
 import java.awt.RenderingHints
 import java.awt.geom.AffineTransform
@@ -19,7 +20,9 @@ class IconBuilder(
         val g = img.graphics as Graphics2D
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)
 
-        paintBackground(g)
+        // paint background
+        g.color = paintOptions.background
+        g.fillRect(0, 0, width, height)
 
         val scaleX = width.toDouble() / 24.toDouble()
         val scaleY = height.toDouble() / 24.toDouble()
@@ -31,16 +34,14 @@ class IconBuilder(
         if (paintOptions.fill) {
             g.fill(path2)
         }
+        else {
+            g.stroke = BasicStroke(paintOptions.strokeWidth)
+            g.draw(path2)
+        }
 
         //
         g.dispose()
 
         return img
-    }
-
-    private fun paintBackground(g: Graphics2D) {
-        //g.setColor(Color(0x00FFFFFF,true))
-        g.color = paintOptions.background
-        g.fillRect(0, 0, width, height)
     }
 }

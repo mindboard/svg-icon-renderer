@@ -7,4 +7,5 @@ A tool to render SVG commands
 
 ```
 ./gradlew run -Pargs="data/pen.json"
+./gradlew run -Pargs="data/rectangle.json"
 ```

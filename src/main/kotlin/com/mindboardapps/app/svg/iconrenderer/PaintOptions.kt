@@ -5,4 +5,5 @@ import java.awt.Color
 data class PaintOptions(
     val foreground: Color,
     val background: Color,
-    val fill: Boolean)
+    val fill: Boolean,
+	val strokeWidth: Float)

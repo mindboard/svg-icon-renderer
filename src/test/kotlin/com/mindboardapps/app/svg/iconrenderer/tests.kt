@@ -28,7 +28,7 @@ class TestSource {
             val svgCommands = item.second
             val width = 256
             val height = 256
-            val paintOptions = PaintOptions( Color(162,172,170, 255), Color(255,255,255, 0), true )
+            val paintOptions = PaintOptions( Color(162,172,170, 255), Color(255,255,255, 0), true, 0.toFloat() )
         
             ImageIO.write(
                 IconBuilder(svgCommands, width, height, paintOptions).createImage(),
