@@ -1,0 +1,19 @@
+{
+  "backgroundColor":   {
+    "a": 255,
+    "b": 170,
+    "g": 172,
+    "r": 162
+  },
+  "svgCommands": "M 2.4,4.8 L 21.6,4.8 L 21.6,19.2 L 2.4,19.2 z",
+  "foregroundColor":   {
+    "a": 255,
+    "b": 227,
+    "g": 246,
+    "r": 253
+  },
+  "fill": false,
+  "strokeWidth": 1.2,
+  "width": 32,
+  "height": 32
+}
